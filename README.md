@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This is a package for flash messages in Laravel 5.  It is based off of the work of [Jeffrey Way](http://github.com/laracasts). More documentation coming soon.
+This is a package for flash messages in Laravel 5.  It is based off of a tutorial by Jeffrey Way at [Laracasts](http://github.com/laracasts). More documentation coming soon.
 
 ## Install
 
@@ -15,21 +15,25 @@ Via Composer
 $ composer require jasonstelzer/flashes
 ```
 
+In `app/config/app.php`, add the following lines:
+
+In the *providers* array
+````php
+Jasonstelzer\Flashes\FlashesServiceProvider::class,
+````
+
+In the *aliases* array
+````php
+Jasonstelzer\Flashes\Flashes::class,
+````
+
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
+Flashes::info('This is an informational message');
+Flashes::success('This is a success message');
+Flashes::warning('This is a warning message');
+Flashes::error('This is an error message');
 ```
 
 ## Contributing
