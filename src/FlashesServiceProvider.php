@@ -38,7 +38,7 @@ class FlashesServiceProvider extends ServiceProvider
             'Jasonstelzer\Flashes\LaravelSessionStore'
         );*/
 
-        $this->app->bindShared('flashes', function () {
+        $this->app->singleton('flashes', function () {
             return $this->app->make('Jasonstelzer\Flashes\FlashesNotifier');
         });
     }
