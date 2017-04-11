@@ -9,22 +9,16 @@ This is a package for flash messages in Laravel 5.  It is based off of a tutoria
 
 ## Install
 
-Via Composer
-
-``` bash
-$ composer require jasonstelzer/flashes
-```
-
 In `app/config/app.php`, add the following lines:
 
 In the *providers* array
 ````php
-Jasonstelzer\Flashes\FlashesServiceProvider::class,
+jstelz\Flashes\FlashesServiceProvider::class,
 ````
 
 In the *aliases* array
 ````php
-Jasonstelzer\Flashes\Flashes::class,
+jstelz\Flashes\Flashes::class,
 ````
 
 ## Usage
